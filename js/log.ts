@@ -7,4 +7,11 @@ export function log(...message: readonly (string | number)[]) {
   const p = document.createElement("p");
   p.append(...message.map((m) => String(m)));
   logArea.append(p);
+  return p;
+}
+
+export function error(...message: readonly (string | number)[]) {
+  const p = log(...message);
+  p.classList.add("error");
+  return p;
 }

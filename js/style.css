@@ -27,5 +27,8 @@
   p {
     margin: 0;
 
+    &.error {
+      color: #ff4d4f;
+    }
   }
 }

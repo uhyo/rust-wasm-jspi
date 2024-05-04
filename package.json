@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wasm": "cargo build --release && externref target/wasm32-unknown-unknown/release/rust_wasm_jspi.wasm -o target/wasm32-unknown-unknown/release/bin.wasm"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

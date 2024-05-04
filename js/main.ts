@@ -15,13 +15,35 @@ try {
       getA: new WebAssembly.Function(
         { parameters: ["externref"], results: ["i32"] },
         async () => {
+          log("getA() is called");
           await sleep(1000);
+          log("getA() returns");
           return -1;
         },
         { suspending: "first" },
       ),
-      getB: () => 3,
-      getC: () => 40,
+      // @ts-expect-error
+      getB: new WebAssembly.Function(
+        { parameters: ["externref"], results: ["i32"] },
+        async () => {
+          log("getB() is called");
+          await sleep(1000);
+          log("getB() returns");
+          return 3;
+        },
+        { suspending: "first" },
+      ),
+      // @ts-expect-error
+      getC: new WebAssembly.Function(
+        { parameters: ["externref"], results: ["i32"] },
+        async () => {
+          log("getC() is called");
+          await sleep(1000);
+          log("getC() returns");
+          return 40;
+        },
+        { suspending: "first" },
+      ),
     },
   });
 

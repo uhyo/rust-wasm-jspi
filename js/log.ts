@@ -6,6 +6,12 @@ export function log(...message: readonly (string | number)[]) {
   }
   const p = document.createElement("p");
   p.append(...message.map((m) => String(m)));
+  const now = new Date();
+  const time = document.createElement("time");
+  time.dateTime = now.toISOString();
+  time.append(now.toLocaleTimeString());
+  p.prepend(time);
+
   logArea.append(p);
   return p;
 }

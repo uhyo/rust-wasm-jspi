@@ -30,5 +30,12 @@
     &.error {
       color: #ff4d4f;
     }
+
+    time {
+      display: inline flow-root;
+      margin-right: 1rem;
+      font-size: 0.75em;
+      color: gray;
+    }
   }
 }

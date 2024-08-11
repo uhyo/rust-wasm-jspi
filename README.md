@@ -6,10 +6,8 @@ This is a simple example of how to use Rust to create a WebAssembly module that 
 
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Node.js](https://nodejs.org/en/download/)
-- [externref](https://github.com/slowli/externref)
-  - Run `cargo install externref` to install the CLI tool
 
-Also, configure your browser to enable JSPI. For Chrome, you need to [configure](https://v8.dev/blog/jspi#how-can-i-use-it-today%3F) the experimental feature.
+Also, configure your browser to enable JSPI. For Chrome, you need to [configure](https://v8.dev/blog/jspi#how-can-i-use-jspi-today%3F) the experimental feature.
 
 # Build
 
